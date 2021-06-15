@@ -319,7 +319,7 @@ var __webpack_exports__ = {};
 /*!********************!*\
   !*** ./js/main.js ***!
   \********************/
-__webpack_require__.e(/*! import() */ "sass_main_scss").then(__webpack_require__.bind(__webpack_require__, /*! ../sass/main.scss */ "./sass/main.scss"));
+__webpack_require__.e(/*! import() */ "sass_main_scss").then(__webpack_require__.bind(__webpack_require__, /*! ../sass/main.scss */ "./sass/main.scss")); // import( './blocks/index' );
 
 (function ($) {
   function productTabs() {

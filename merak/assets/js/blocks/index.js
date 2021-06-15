@@ -24,7 +24,10 @@ registerBlockType( 'merak-blocks/heading', {
 	edit: Edit,
 	save( {attributes: { content } } ) {
 		return (
-			<RichText.Content tagName="h4" value={content}/>
+			<div className="merak-icon-heading">
+				<span className="merak-icon-heading_heading"/>
+				<RichText.Content tagName="h4" value={content}/>
+			</div>
 		);
 	},
 } );

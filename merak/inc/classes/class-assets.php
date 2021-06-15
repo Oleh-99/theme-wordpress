@@ -44,7 +44,7 @@ class Assets {
 		wp_enqueue_script( 'ol_magnific_popup', MERAK_DIR_URI . '/assets/lib/magnific-popup.js', array(), null, true );
 		wp_enqueue_script( 'ol_autocomplete', MERAK_DIR_URI . '/assets/lib/jquery.autocomplete.min.js', array(), null, true );
 		wp_enqueue_script( 'ol_mockjax', MERAK_DIR_URI . '/assets/lib/jquery.mockjax.js', array(), null, true );
-		wp_enqueue_script( 'ol_js', MERAK_DIR_URI . '/assets/js/main.js', array(), wp_get_theme()->get( 'Version' ), true );
+		wp_enqueue_script( 'ol_js', MERAK_BUILD_JS_URI . '/main.js', array(), wp_get_theme()->get( 'Version' ), true );
 	}
 
 	public function admin_register_script() {
@@ -72,7 +72,7 @@ class Assets {
 		if ( is_admin() ) {
 			wp_enqueue_script(
 				'merak-blocks-js',
-				MERAK_BUILD_JS_URI . '/blocks.js',
+				MERAK_BUILD_JS_URI . '/editor.js',
 				$js_dependencies,
 				$version,
 				true
@@ -84,12 +84,12 @@ class Assets {
 			'wp-block-library',
 		];
 
-//		wp_enqueue_style(
-//			'merak-blocks-css',
-//			MERAK_BUILD_CSS_URI . '/sass_blocks_scss.css',
-//			$css_dependencies,
-//			filemtime( MERAK_BUILD_CSS_DIR_PATH . '/sass_blocks_scss.css' ),
-//			'all'
-//		);
+		wp_enqueue_style(
+			'merak-blocks-css',
+			MERAK_BUILD_CSS_URI . '/sass_editor_scss.css',
+			$css_dependencies,
+			filemtime( MERAK_BUILD_CSS_DIR_PATH . '/sass_editor_scss.css' ),
+			'all'
+		);
 	}
 }

@@ -31,8 +31,7 @@ function merak_get_theme_instance() {
 }
 
 function custom_admin_js() {
-	$url = get_bloginfo( 'template_directory' ) . '/assets/js/main.js';
-	echo '"<script type="text/javascript" src="' . $url . '"></script>"';
+	echo '"<script type="text/javascript" src="' . MERAK_BUILD_JS_URI . '/main.js"></script>"';
 }
 add_action( 'admin_footer', 'custom_admin_js' );
 
